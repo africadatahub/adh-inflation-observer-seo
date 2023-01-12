@@ -2107,7 +2107,10 @@ if(location.pathname.includes('inflation-observer')) {
             
             // Create the new node to insert
             const introPar = document.createElement("div");
-            introPar.setAttribute("class", "section");
+            introPar.style = "width: 100%;max-width: 1440px;margin-right: auto;margin-left: auto;padding-right: 4em;padding-left: 4em;";
+            
+
+
             introPar.innerHTML = country_text;
             const parentDiv = document.getElementById("adh-embed").parentNode;
             let embed = document.getElementById("adh-embed");
