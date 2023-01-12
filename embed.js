@@ -2106,7 +2106,8 @@ if(location.pathname.includes('inflation-observer')) {
             let country_text = `${country_name}'s consumer price inflation (CPI) rate for the full year ${last_full_year} was ${annual}%.`;
             
             // Create the new node to insert
-            const introPar = document.createElement("span");
+            const introPar = document.createElement("div");
+            introPar.setAttribute("class", "section");
             introPar.innerHTML = country_text;
             const parentDiv = document.getElementById("adh-embed").parentNode;
             let embed = document.getElementById("adh-embed");
