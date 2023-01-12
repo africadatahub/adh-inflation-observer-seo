@@ -221,9 +221,6 @@ let countries = [
     }
 ]
 
-let 
-
-
 if(location.pathname.includes('inflation-observer')) {
 
     let location_country = location.search.split('country=')[1];
