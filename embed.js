@@ -2107,8 +2107,8 @@ if(location.pathname.includes('inflation-observer')) {
                 extra_notes = `<p>${extra_notes}</p>`;
             }
 
-            let title = document.querySelector('h1.hero-title');
-            title.innerHTML = `${country_name} Inflation Observer`;
+            let page_title = document.querySelector('h1.hero-title');
+            page_title.innerHTML = `${country_name} Inflation Observer`;
             document.title = `${country_name} Inflation Observer | Africa Data Hub`;
 
 
