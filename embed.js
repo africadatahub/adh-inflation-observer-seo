@@ -1,22 +1,254 @@
+let countries = [
+    {
+      "iso_code": "DZA",
+      "location": "Algeria"
+    },
+    {
+      "iso_code": "AGO",
+      "location": "Angola"
+    },
+    {
+      "iso_code": "BEN",
+      "location": "Benin"
+    },
+    {
+      "iso_code": "BWA",
+      "location": "Botswana"
+    },
+    {
+      "iso_code": "BFA",
+      "location": "Burkina Faso"
+    },
+    {
+      "iso_code": "BDI",
+      "location": "Burundi"
+    },
+    {
+      "iso_code": "CMR",
+      "location": "Cameroon"
+    },
+    {
+      "iso_code": "CPV",
+      "location": "Cape Verde"
+    },
+    {
+      "iso_code": "CAF",
+      "location": "Central African Republic"
+    },
+    {
+      "iso_code": "TCD",
+      "location": "Chad"
+    },
+    {
+      "iso_code": "COM",
+      "location": "Comoros"
+    },
+    {
+      "iso_code": "COG",
+      "location": "Congo"
+    },
+    {
+      "iso_code": "CIV",
+      "location": "Cote d'Ivoire"
+    },
+    {
+      "iso_code": "COD",
+      "location": "Democratic Republic of Congo"
+    },
+    {
+      "iso_code": "DJI",
+      "location": "Djibouti"
+    },
+    {
+      "iso_code": "EGY",
+      "location": "Egypt"
+    },
+    {
+      "iso_code": "GNQ",
+      "location": "Equatorial Guinea"
+    },
+    {
+      "iso_code": "ERI",
+      "location": "Eritrea"
+    },
+    {
+      "iso_code": "SWZ",
+      "location": "Eswatini"
+    },
+    {
+      "iso_code": "ETH",
+      "location": "Ethiopia"
+    },
+    {
+      "iso_code": "GAB",
+      "location": "Gabon"
+    },
+    {
+      "iso_code": "GMB",
+      "location": "Gambia"
+    },
+    {
+      "iso_code": "GHA",
+      "location": "Ghana"
+    },
+    {
+      "iso_code": "GIN",
+      "location": "Guinea"
+    },
+    {
+      "iso_code": "GNB",
+      "location": "Guinea-Bissau"
+    },
+    {
+      "iso_code": "KEN",
+      "location": "Kenya"
+    },
+    {
+      "iso_code": "LSO",
+      "location": "Lesotho"
+    },
+    {
+      "iso_code": "LBR",
+      "location": "Liberia"
+    },
+    {
+      "iso_code": "LBY",
+      "location": "Libya"
+    },
+    {
+      "iso_code": "MDG",
+      "location": "Madagascar"
+    },
+    {
+      "iso_code": "MWI",
+      "location": "Malawi"
+    },
+    {
+      "iso_code": "MLI",
+      "location": "Mali"
+    },
+    {
+      "iso_code": "MRT",
+      "location": "Mauritania"
+    },
+    {
+      "iso_code": "MUS",
+      "location": "Mauritius"
+    },
+    {
+      "iso_code": "MAR",
+      "location": "Morocco"
+    },
+    {
+      "iso_code": "MOZ",
+      "location": "Mozambique"
+    },
+    {
+      "iso_code": "NAM",
+      "location": "Namibia"
+    },
+    {
+      "iso_code": "NER",
+      "location": "Niger"
+    },
+    {
+      "iso_code": "NGA",
+      "location": "Nigeria"
+    },
+    {
+      "iso_code": "RWA",
+      "location": "Rwanda"
+    },
+    {
+      "iso_code": "SHN",
+      "location": "Saint Helena"
+    },
+    {
+      "iso_code": "STP",
+      "location": "Sao Tome and Principe"
+    },
+    {
+      "iso_code": "SEN",
+      "location": "Senegal"
+    },
+    {
+      "iso_code": "SYC",
+      "location": "Seychelles"
+    },
+    {
+      "iso_code": "SLE",
+      "location": "Sierra Leone"
+    },
+    {
+      "iso_code": "SOM",
+      "location": "Somalia"
+    },
+    {
+      "iso_code": "ZAF",
+      "location": "South Africa"
+    },
+    {
+      "iso_code": "SSD",
+      "location": "South Sudan"
+    },
+    {
+      "iso_code": "SDN",
+      "location": "Sudan"
+    },
+    {
+      "iso_code": "TZA",
+      "location": "Tanzania"
+    },
+    {
+      "iso_code": "TGO",
+      "location": "Togo"
+    },
+    {
+      "iso_code": "TUN",
+      "location": "Tunisia"
+    },
+    {
+      "iso_code": "UGA",
+      "location": "Uganda"
+    },
+    {
+      "iso_code": "ZMB",
+      "location": "Zambia"
+    },
+    {
+      "iso_code": "ZWE",
+      "location": "Zimbabwe"
+    }
+]
+
+let 
+
 
 if(location.pathname.includes('inflation-observer')) {
 
-    let country_name = 'South Africa';
-    let last_full_year = '2021';
-    let latest_month = 'January 2022';
-    let annual = 'something';
-    let monthly_change_yoy = 'something else';
+    let location_country = location.search.split('country=')[1];
 
-    let country_text = `
-    ${country_name}'s consumer price inflation (CPI) rate for the full year ${last_full_year} was ${annual}%. In ${latest_month} the annualised CPI was ${monthly_change_yoy}%. You can explore more details and the breakdown by category of goods in our ${country_name} Inflation Observer below.
-    `
+    if(location_country != undefined && location_country != '') {
 
-    // Create the new node to insert
-    const introPar = document.createElement("span");
-    introPar.innerHTML = country_text;
-    const parentDiv = document.getElementById("adh-embed").parentNode;
-    let embed = document.getElementById("adh-embed");
-    parentDiv.insertBefore(introPar, embed);
+        let country = countries.find(country => country.iso_code == location_country);
+        
+        if(country != undefined) {
+
+            let country_name = country.location;
+            let last_full_year = '2021';
+            let annual = 'something';
+
+            let country_text = `${country_name}'s consumer price inflation (CPI) rate for the full year ${last_full_year} was ${annual}%.`;
+            
+            // Create the new node to insert
+            const introPar = document.createElement("span");
+            introPar.innerHTML = country_text;
+            const parentDiv = document.getElementById("adh-embed").parentNode;
+            let embed = document.getElementById("adh-embed");
+            parentDiv.insertBefore(introPar, embed);
+
+        }
+    }
 
 
     
