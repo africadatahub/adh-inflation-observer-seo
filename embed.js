@@ -2101,10 +2101,13 @@ if(location.pathname.includes('inflation-observer')) {
         let country = countries.find(country => country.location.toLowerCase() == location_country.replace('-',' '));
 
         if(location_country == 'guinea-bissau') {
-            location = countries.find(country => country.location.toLowerCase() == location_country);
+            location_country = countries.find(country => country.location.toLowerCase() == location_country);
         }
 
         if(country != undefined) {
+
+            let iframe = document.querySelector('iframe.adh-embed');
+            iframe.src = `https://africadatahub.org/embed/inflation-observer?country=${location_country}`;
 
             let country_name = country.location;
             let last_full_year = country_inflation_data.find(countryData => countryData.country_code == country.iso_code).last_full_year;
