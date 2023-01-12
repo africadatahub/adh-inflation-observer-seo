@@ -3,6 +3,7 @@ if(location.pathname.includes('inflation-observer')) {
 
     let country_name = 'South Africa';
     let last_full_year = '2019';
+    let latest_month = 'January 2020';
     let annual = 4.5;
     let monthly_change_yoy = 0.1;
 
