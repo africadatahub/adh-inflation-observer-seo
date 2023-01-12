@@ -2087,16 +2087,23 @@ let country_inflation_data = [
 ]
 
 
+
 if(location.pathname.includes('inflation-observer')) {
 
     let location_country = location.search.split('country=')[1];
 
     if(location_country != undefined && location_country != '') {
 
-        let country = countries.find(country => country.iso_code == location_country);
+        if(location_country == 'cote-d-ivoire') {
+            location_country = "cote-d'ivoire";
+        }
 
-        
-        
+        let country = countries.find(country => country.location.toLowerCase() == location_country.replace('-',' '));
+
+        if(location_country == 'guinea-bissau') {
+            location = countries.find(country => country.location.toLowerCase() == location_country);
+        }
+
         if(country != undefined) {
 
             let country_name = country.location;
