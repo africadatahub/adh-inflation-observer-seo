@@ -2100,8 +2100,8 @@ if(location.pathname.includes('inflation-observer')) {
         if(country != undefined) {
 
             let country_name = country.location;
-            let last_full_year = country_inflation_data.find(country => country.country_code == country.iso_code).last_full_year;
-            let annual = country_inflation_data.find(country => country.country_code == country.iso_code).annual;
+            let last_full_year = country_inflation_data.find(countryData => countryData.country_code == country.iso_code).last_full_year;
+            let annual = country_inflation_data.find(countryData => countryData.country_code == country.iso_code).annual;
 
             let country_text = `${country_name}'s consumer price inflation (CPI) rate for the full year ${last_full_year} was ${annual}%.`;
             
