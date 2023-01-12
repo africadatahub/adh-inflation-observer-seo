@@ -2107,9 +2107,12 @@ if(location.pathname.includes('inflation-observer')) {
                 extra_notes = `<p>${extra_notes}</p>`;
             }
 
+            let title = document.querySelector('.here-title');
+            title.innerHTML = `${country_name} Inflation Observer`;
+            document.title = `${country_name} Inflation Observer | Africa Data Hub`;
 
 
-            let country_text = `<p><strong>${country_name}</strong>'s consumer price inflation (CPI) rate for the full year <strong>${last_full_year}</strong> was <strong>${Math.round(annual * 100) / 100}%</strong>.</p><p>You can explore more details and the breakdown by category of goods in our <strong>${country_name}</strong> Inflation Observer below.</strong>.</p> ${extra_notes} <p>Want to see how ${country_name} compares to its neighbours? Select a new country to watch in the menu below.</p>`;
+            let country_text = `<p><strong>${country_name}</strong>'s consumer price inflation (CPI) rate for the full year <strong>${last_full_year}</strong> was <strong>${Math.round(annual * 100) / 100}%</strong>.</p><p>You can explore more details and the breakdown by category of goods in our <strong>${country_name}</strong> Inflation Observer below.</strong>.</p> ${extra_notes}`;
             const introPar = document.createElement("div");
             introPar.style = "width: 100%;max-width: 1440px;margin: 2em auto; padding: 0 5em;font-size: 16px;";
 
