@@ -2103,12 +2103,12 @@ if(location.pathname.includes('inflation-observer')) {
             let last_full_year = country_inflation_data.find(countryData => countryData.country_code == country.iso_code).last_full_year;
             let annual = country_inflation_data.find(countryData => countryData.country_code == country.iso_code).annual;
 
-            let country_text = `${country_name}'s consumer price inflation (CPI) rate for the full year ${last_full_year} was ${annual}%.`;
-            
-            // Create the new node to insert
+            let country_text = `<strong>${country_name}</strong>'s consumer price inflation (CPI) rate for the full year <strong>${last_full_year}</strong> was <strong>${Math.round(annual * 100) / 100}%</strong>.`;
             const introPar = document.createElement("div");
-            introPar.style = "width: 100%;max-width: 1440px;margin-right: auto;margin-left: auto;padding-right: 4em;padding-left: 4em;";
-            
+            introPar.style = "width: 100%;max-width: 1440px;margin: 1em auto; padding: 0 4em;";
+
+
+
 
 
             introPar.innerHTML = country_text;
