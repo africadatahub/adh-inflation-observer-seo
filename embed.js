@@ -2107,7 +2107,7 @@ if(location.pathname.includes('inflation-observer')) {
         if(country != undefined) {
 
             let iframe = document.querySelector('#adh-embed iframe');
-            iframe.src = `https://africadatahub.org/embed/inflation-observer?country=${location_country}`;
+            iframe.src = `https://inflation-observer.netlify.app/${location_country}`;
 
             let country_name = country.location;
             let last_full_year = country_inflation_data.find(countryData => countryData.country_code == country.iso_code).last_full_year;
