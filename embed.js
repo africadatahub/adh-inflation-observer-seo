@@ -2105,7 +2105,7 @@ if(location.pathname.includes('inflation-observer')) {
 
             let country_text = `<strong>${country_name}</strong>'s consumer price inflation (CPI) rate for the full year <strong>${last_full_year}</strong> was <strong>${Math.round(annual * 100) / 100}%</strong>.`;
             const introPar = document.createElement("div");
-            introPar.style = "width: 100%;max-width: 1440px;margin: 1em auto; padding: 0 4em;";
+            introPar.style = "width: 100%;max-width: 1440px;margin: 1em auto; padding: 0 4em;font-size: 16px;";
 
 
 
