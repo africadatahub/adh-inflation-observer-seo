@@ -524,14 +524,14 @@ let country_inflation_data = [
       "Extra_notes": ""
     },
     {
-      "country_name": "Congo, Dem. Rep.",
+      "country_name": "Democratic Republic of Congo",
       "country_code": "COD",
       "last_full_year": 2021,
       "annual": "",
       "Extra_notes": ""
     },
     {
-      "country_name": "Congo, Rep.",
+      "country_name": "Congo",
       "country_code": "COG",
       "last_full_year": 2021,
       "annual": "1.71564275451263",
@@ -2098,7 +2098,7 @@ if(location.pathname.includes('inflation-observer')) {
             location_country = "cote-d'ivoire";
         }
 
-        let country = countries.find(country => country.location.toLowerCase() == location_country.replace('-',' '));
+        let country = countries.find(country => country.location.toLowerCase() == location_country.replaceAll('-',' '));
 
         if(location_country == 'guinea-bissau') {
             location_country = countries.find(country => country.location.toLowerCase() == location_country);
