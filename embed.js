@@ -2175,6 +2175,8 @@ if(location.pathname.includes('inflation-observer')) {
               }
             }`;
 
+            document.head.appendChild(script);
+
 
             let country_text = `<p><strong>${country_name}</strong>'s consumer price inflation (CPI) rate for the full year <strong>${last_full_year}</strong> was <strong>${Math.round(annual * 100) / 100}%</strong>.</p><p>You can explore more details and the breakdown by category of goods in our <strong>${country_name}</strong> Inflation Observer below.</strong>.</p> ${extra_notes}`;
             const introPar = document.createElement("div");
