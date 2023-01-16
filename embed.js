@@ -2144,7 +2144,6 @@ if(location.pathname.includes('inflation-observer')) {
                  "CONSUMER PRICE INFLATION > COICOP INDICATORS",
                  "CONSUMER PRICE INFLATION > AFRICA > {COUNTRY}"
               ],
-              "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
               "isAccessibleForFree" : true,
               "creator":{
                  "@type":"Organization",
