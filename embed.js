@@ -2118,6 +2118,63 @@ if(location.pathname.includes('inflation-observer')) {
             page_title.innerHTML = `${country_name} Inflation Observer`;
             document.title = `${country_name} Inflation Observer | Africa Data Hub`;
 
+            document.querySelector('meta[name="description"]').setAttribute("content", `Consumer price inflation in ${country_name}, 2008 to the present, including COICOP indicators`);
+
+            document.querySelector('meta[property="og:title"]').setAttribute("content", `${country_name} Inflation Observer | Africa Data Hub`);
+
+            document.querySelector('meta[property="og:description"]').setAttribute("content", `Consumer price inflation in ${country_name}, 2008 to the present, including COICOP indicators`);
+
+            document.querySelector('meta[property="twitter:title"]').setAttribute("content", `${country_name} Inflation Observer | Africa Data Hub`);
+
+            document.querySelector('meta[property="twitter:description"]').setAttribute("content", `Consumer price inflation in ${country_name}, 2008 to the present, including COICOP indicators`);
+
+            document.querySelector('meta[property="og:type"]').setAttribute("content", `website`);
+
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.innerHTML = `{
+              "@context":"https://schema.org/",
+              "@type":"Dataset",
+              "name":"${country_name} Consumer price inflation, 2008-present",
+              "description":"Consumer price inflation in ${country_name}, 2008 to the present, including COICOP indicators",
+              "url":”https://www.africadatahub.org/data-resources/inflation-observer?country=${location_country}",
+              "isPartOF":"https://www.africadatahub.org/data-resources/inflation-observer",
+              "keywords":[
+                 "CONSUMER PRICE INFLATION > MONTHLY CHANGE, ANNUAL %", 
+                 "CONSUMER PRICE INFLATION > COICOP INDICATORS",
+                 "CONSUMER PRICE INFLATION > AFRICA > {COUNTRY}"
+              ],
+              "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+              "isAccessibleForFree" : true,
+              "creator":{
+                 "@type":"Organization",
+                 "url": "https://www.africadatahub.org",
+                 "name":"Africa Data Hub",
+                 "contactPoint":{
+                    "@type":"ContactPoint",
+                    "contactType": "enquiries",
+                    "email":"info@africadatahub.org"
+                 }
+              },
+              "funder":{
+                 "@type": "Organization",
+                 "sameAs": "https://www.gatesfoundation.org/",
+                 "name": "Bill & Melinda Gates Foundation"
+              },
+              "includedInDataCatalog":{
+                 "@type":"DataCatalog",
+                 "name":"https://ckan.africadatahub.org/"
+              },
+              "distribution":[
+                 {
+                    "@type":"DataDownload",
+                    "encodingFormat":"CSV",
+                    "contentUrl":"https://ckan.africadatahub.org/datastore/dump/626c5497-a3d2-461f-9f51-8485d94e36b3?bom=True"
+                 },
+        
+              }
+            }`;
+
 
             let country_text = `<p><strong>${country_name}</strong>'s consumer price inflation (CPI) rate for the full year <strong>${last_full_year}</strong> was <strong>${Math.round(annual * 100) / 100}%</strong>.</p><p>You can explore more details and the breakdown by category of goods in our <strong>${country_name}</strong> Inflation Observer below.</strong>.</p> ${extra_notes}`;
             const introPar = document.createElement("div");
