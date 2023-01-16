@@ -2137,7 +2137,7 @@ if(location.pathname.includes('inflation-observer')) {
               "@type":"Dataset",
               "name":"${country_name} Consumer price inflation, 2008-present",
               "description":"Consumer price inflation in ${country_name}, 2008 to the present, including COICOP indicators",
-              "url":”https://www.africadatahub.org/data-resources/inflation-observer?country=${location_country}",
+              "url":"https://www.africadatahub.org/data-resources/inflation-observer?country=${location_country}",
               "isPartOF":"https://www.africadatahub.org/data-resources/inflation-observer",
               "keywords":[
                  "CONSUMER PRICE INFLATION > MONTHLY CHANGE, ANNUAL %", 
