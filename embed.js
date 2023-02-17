@@ -2122,7 +2122,7 @@ if(location.pathname.includes('inflation-observer')) {
     const countrySelect = document.createElement("div");
 
     // countrySelect.innerHTML = country_text;
-    countrySelect.innerHTML = country_select;
+    countrySelect.innerHTML = header;
     const parentDiv = document.getElementById("adh-embed").parentNode;
     let embed = document.getElementById("adh-embed");
     parentDiv.insertBefore(countrySelect, embed);
