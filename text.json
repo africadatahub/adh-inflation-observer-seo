@@ -1,0 +1,40 @@
+{
+    "@context":"https://schema.org/",
+    "@type":"Dataset",
+    "name":"${country_name} Consumer price inflation, 2008-present",
+    "description":"Consumer price inflation in ${country_name}, 2008 to the present, including COICOP indicators",
+    "url":"https://www.africadatahub.org/data-resources/inflation-observer?country=${location_country}",
+    "isPartOF":"https://www.africadatahub.org/data-resources/inflation-observer",
+    "keywords":[
+       "CONSUMER PRICE INFLATION > MONTHLY CHANGE, ANNUAL %", 
+       "CONSUMER PRICE INFLATION > COICOP INDICATORS",
+       "CONSUMER PRICE INFLATION > AFRICA > {COUNTRY}"
+    ],
+    "isAccessibleForFree" : true,
+    "creator":{
+       "@type":"Organization",
+       "url": "https://www.africadatahub.org",
+       "name":"Africa Data Hub",
+       "contactPoint":{
+          "@type":"ContactPoint",
+          "contactType": "enquiries",
+          "email":"info@africadatahub.org"
+       }
+    },
+    "funder":{
+       "@type": "Organization",
+       "sameAs": "https://www.gatesfoundation.org/",
+       "name": "Bill & Melinda Gates Foundation"
+    },
+    "includedInDataCatalog":{
+       "@type":"DataCatalog",
+       "name":"https://ckan.africadatahub.org/"
+    },
+    "distribution":[
+       {
+          "@type":"DataDownload",
+          "encodingFormat":"CSV",
+          "contentUrl":"https://ckan.africadatahub.org/datastore/dump/626c5497-a3d2-461f-9f51-8485d94e36b3?bom=True"
+       }
+    ]
+}

@@ -2088,6 +2088,8 @@ let country_inflation_data = [
 
 goToCountry = (e) => {
 
+  console.log('here');
+
   console.log(e);
 
   let country = e.target.value;
@@ -2109,13 +2111,14 @@ if(location.pathname.includes('inflation-observer')) {
     });
     country_select += `</select>`;
 
-    let country_text = `<p>Use the dropdown menu to view CPI data for your country.</p>`;
+    // let country_text = `<p>Use the dropdown menu to view CPI data for your country.</p>`;
 
-    country_text += country_select;
+    // country_text += country_select;
 
     const countrySelect = document.createElement("div");
 
-    countrySelect.innerHTML = country_text;
+    // countrySelect.innerHTML = country_text;
+    countrySelect.innerHTML = country_select;
     const parentDiv = document.getElementById("adh-embed").parentNode;
     let embed = document.getElementById("adh-embed");
     parentDiv.insertBefore(countrySelect, embed);
