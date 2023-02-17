@@ -2094,7 +2094,7 @@ goToCountry = () => {
 
       country = country.toLowerCase().replace(/ /g, '-');
 
-      if(lcountry == "cote-d'ivoire") {
+      if(country == "cote-d'ivoire") {
         country = 'cote-d-ivoire';
       }
 
