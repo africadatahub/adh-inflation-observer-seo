@@ -2090,15 +2090,14 @@ goToCountry = () => {
 
   let country = document.getElementById("countrySelect").value;
 
-  // to lowercase and replace spaces with hyphens
-  country = country.toLowerCase().replace(/ /g, '-');
-
-  if(location_country == "cote-d'ivoire") {
-    location_country = 'cote-d-ivoire';
-  }
-
-
   if(country != '') {
+
+      country = country.toLowerCase().replace(/ /g, '-');
+
+      if(lcountry == "cote-d'ivoire") {
+        country = 'cote-d-ivoire';
+      }
+
       location.href = `https://www.africadatahub.org/data-resources/inflation-observer?country=${country}`;
   }
 
