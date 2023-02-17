@@ -2108,7 +2108,7 @@ if(location.pathname.includes('inflation-observer')) {
 
     let location_country = location.search.split('country=')[1];
 
-    let country_select = `<select id="countrySelect" onchange="goToCountry()" style="padding: 0.5em;"><option value="">Select your country</option>`;
+    let country_select = `<select id="countrySelect" onchange="goToCountry()" style="padding: 0.5em; background-color: #dfe6e8; border-radius: 5px; border-color: #dfe6e8;"><option value="">Select your country</option>`;
     countries.forEach(country => {
         country_select += `<option value="${country.location}">${country.location}</option>`;
     });
@@ -2170,6 +2170,8 @@ if(location.pathname.includes('inflation-observer')) {
             document.querySelector('meta[property="twitter:description"]').setAttribute("content", `Consumer price inflation in ${country_name}, 2008 to the present, including COICOP indicators`);
 
             document.querySelector('meta[property="og:type"]').setAttribute("content", `website`);
+
+            document.querySelector('#countrySelect').value(country_name);
 
             const script = document.createElement('script');
             script.type = 'application/ld+json';
