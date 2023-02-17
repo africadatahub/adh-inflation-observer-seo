@@ -2114,10 +2114,11 @@ if(location.pathname.includes('inflation-observer')) {
     });
     country_select += `</select>`;
 
-    // let country_text = `<p>Use the dropdown menu to view CPI data for your country.</p>`;
-
-    // country_text += country_select;
-
+    let header = `<div class="container">`;
+    let country_text = `<p>Use the dropdown menu to view CPI data for your country.</p>`;
+    
+    header += country_text + country_select + `</div>`;
+    
     const countrySelect = document.createElement("div");
 
     // countrySelect.innerHTML = country_text;
