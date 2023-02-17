@@ -2114,10 +2114,10 @@ if(location.pathname.includes('inflation-observer')) {
     });
     country_select += `</select>`;
 
-    let header_style = "width: 100%; padding: 1em; font-size: 18px; text-align: center;"
+    let header_style = "width: 100%; max-width: 1440px;  padding: 1em; font-size: 16px; text-align: center;"
 
     if(location_country != undefined && location_country != '') {
-      header_style = "width: 100%; padding: 1em; font-size: 18px; text-align: left;" 
+      header_style = "width: 100%; max-width: 1440px;  padding: 1em; font-size: 16px; text-align: left;" 
     }
 
     let header = `<div class="container"><div style="${header_style}">`;
@@ -2227,7 +2227,7 @@ if(location.pathname.includes('inflation-observer')) {
 
             let country_text = `<p><strong>${country_name}</strong>'s consumer price inflation (CPI) rate for the full year <strong>${last_full_year}</strong> was <strong>${Math.round(annual * 100) / 100}%</strong>.</p><p>You can explore more details and the breakdown by category of goods in our <strong>${country_name}</strong> Inflation Observer below.</strong>.</p> ${extra_notes}`;
             const introPar = document.createElement("div");
-            introPar.style = "width: 100%;max-width: 1440px;margin: 2em auto; padding: 0 5em;font-size: 16px;";
+            introPar.style = "width: 100%;max-width: 1440px; margin: 1em auto 2em; padding: 0 5em;font-size: 16px;";
 
             introPar.innerHTML = country_text;
             const parentDiv = document.getElementById("adh-embed").parentNode;
