@@ -2092,6 +2092,25 @@ if(location.pathname.includes('inflation-observer')) {
 
     let location_country = location.search.split('country=')[1];
 
+    let country_select = `<select><option value="">Select your country</option>`;
+    countries.forEach(country => {
+        country_select += `<option value="${country.location}">${country.location}</option>`;
+    });
+    country_select += `</select>`;
+
+    let country_text = `<p>Use the dropdown menu to view CPI data for your country.</p>`;
+
+    country_text += country_select;
+
+    const countrySelect = document.createElement("div");
+
+    countrySelect.innerHTML = country_text;
+    const parentDiv = document.getElementById("adh-embed").parentNode;
+    let embed = document.getElementById("adh-embed");
+    parentDiv.insertBefore(countrySelect, embed);
+
+
+
     if(location_country != undefined && location_country != '') {
 
         if(location_country == 'cote-d-ivoire') {
