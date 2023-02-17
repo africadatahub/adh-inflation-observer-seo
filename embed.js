@@ -2108,14 +2108,14 @@ if(location.pathname.includes('inflation-observer')) {
 
     let location_country = location.search.split('country=')[1];
 
-    let country_select = `<select id="countrySelect" onchange="goToCountry()"><option value="">Select your country</option>`;
+    let country_select = `<select id="countrySelect" onchange="goToCountry()" style="padding: 0.5em;"><option value="">Select your country</option>`;
     countries.forEach(country => {
         country_select += `<option value="${country.location}">${country.location}</option>`;
     });
     country_select += `</select>`;
 
-    let header = `<div class="container" style="padding: 1em; font-size: 18px; text-align: center;"><div>`;
-    let country_text = `<p>Use the dropdown menu to view CPI data for your country.<br/></p>`;
+    let header = `<div class="container"><div style="width: 100%; padding: 1em; font-size: 18px; text-align: center;">`;
+    let country_text = `<p style="font-weight: bold;">Use the dropdown menu to view CPI data for your country.<br/></p>`;
     
     header += country_text + country_select + `</div></div>`;
     
