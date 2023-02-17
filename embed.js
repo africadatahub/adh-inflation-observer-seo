@@ -2116,6 +2116,10 @@ if(location.pathname.includes('inflation-observer')) {
 
     let header = `<div class="container"><div style="width: 100%; padding: 1em; font-size: 18px; text-align: center;">`;
     let country_text = `<p style="font-weight: bold;">Use the dropdown menu to view CPI data for your country.<br/></p>`;
+
+    if(location_country != undefined && location_country != '') {
+      country_text = '';
+    }
     
     header += country_text + country_select + `</div></div>`;
     
