@@ -2088,14 +2088,15 @@ let country_inflation_data = [
 
 goToCountry = () => {
 
-  console.log('here');
+  let country = document.getElementById("countrySelect").value;
 
-  d = document.getElementById("countrySelect").value;
+  // to lowercase and replace spaces with hyphens
+  country = country.toLowerCase().replace(/ /g, '-');
 
-  console.log(d);
+  if(location_country == "cote-d'ivoire") {
+    location_country = 'cote-d-ivoire';
+  }
 
-
-  let country = d;
 
   if(country != '') {
       location.href = `https://www.africadatahub.org/data-resources/inflation-observer?country=${country}`;
