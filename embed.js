@@ -2171,7 +2171,7 @@ if(location.pathname.includes('inflation-observer')) {
 
             document.querySelector('meta[property="og:type"]').setAttribute("content", `website`);
 
-            document.querySelector('#countrySelect').value(country_name);
+            document.getElementById("countrySelect").value = country_name;
 
             const script = document.createElement('script');
             script.type = 'application/ld+json';
