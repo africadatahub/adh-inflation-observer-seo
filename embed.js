@@ -2088,6 +2088,8 @@ let country_inflation_data = [
 
 goToCountry = (e) => {
 
+  console.log(e);
+
     let country = e.target.value;
 
     if(country != '') {
@@ -2101,7 +2103,7 @@ if(location.pathname.includes('inflation-observer')) {
 
     let location_country = location.search.split('country=')[1];
 
-    let country_select = `<select onChange="goToCountry()"><option value="">Select your country</option>`;
+    let country_select = `<select onChange="goToCountry(e)"><option value="">Select your country</option>`;
     countries.forEach(country => {
         country_select += `<option value="${country.location}">${country.location}</option>`;
     });
