@@ -2114,7 +2114,7 @@ if(location.pathname.includes('inflation-observer')) {
     });
     country_select += `</select>`;
 
-    let header_style = "width: 100%; max-width: 1440px;  padding: 1em; font-size: 16px; text-align: center;"
+    let header_style = "width: 100%; max-width: 1440px;  padding: 2em 1em 1em; font-size: 16px; text-align: center;"
 
     if(location_country != undefined && location_country != '') {
       header_style = "width: 100%; max-width: 1440px;  padding: 1em; font-size: 16px; text-align: left;" 
