@@ -2114,7 +2114,13 @@ if(location.pathname.includes('inflation-observer')) {
     });
     country_select += `</select>`;
 
-    let header = `<div class="container"><div style="width: 100%; padding: 1em; font-size: 18px; text-align: center;">`;
+    let header_style = "width: 100%; padding: 1em; font-size: 18px; text-align: center;"
+
+    if(location_country != undefined && location_country != '') {
+      header_style = "width: 100%; padding: 1em; font-size: 18px; text-align: left;" 
+    }
+
+    let header = `<div class="container"><div style="${header_style}">`;
     let country_text = `<p style="font-weight: bold;">Use the dropdown menu to view CPI data for your country.<br/></p>`;
 
     if(location_country != undefined && location_country != '') {
