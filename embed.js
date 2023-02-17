@@ -2086,13 +2086,16 @@ let country_inflation_data = [
     }
 ]
 
-goToCountry = (e) => {
+goToCountry = () => {
 
   console.log('here');
 
-  console.log(e);
+  d = document.getElementById("countrySelect").value;
 
-  let country = e.target.value;
+  console.log(d);
+
+
+  let country = d;
 
   if(country != '') {
       location.href = `https://www.africadatahub.org/data-resources/inflation-observer?country=${country}`;
@@ -2105,7 +2108,7 @@ if(location.pathname.includes('inflation-observer')) {
 
     let location_country = location.search.split('country=')[1];
 
-    let country_select = `<select onchange="goToCountry(this)"><option value="">Select your country</option>`;
+    let country_select = `<select id="countrySelect" onchange="goToCountry()"><option value="">Select your country</option>`;
     countries.forEach(country => {
         country_select += `<option value="${country.location}">${country.location}</option>`;
     });
